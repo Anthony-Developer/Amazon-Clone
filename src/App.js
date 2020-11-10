@@ -6,7 +6,6 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <h1>App JS Component</h1>
     </div>
   )
 }
