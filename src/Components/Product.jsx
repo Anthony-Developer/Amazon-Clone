@@ -1,24 +1,30 @@
 import React from 'react'
 import '../Styling/Product.css'
 
-function Product() {
+function Product({ id,  title, image, price, rating }) {
     return (
         <div className="product">
+            
             <div className="product_info">
-                <p>The Lean Startup</p>
+                <p>{title}</p>
+                
                 <p className="produc-price">
                     <small>$</small>
-                    <strong>19.99</strong>
+                    <strong>{price}</strong>
                 </p>
+                
                 <div className="product_rating">
-                {/* eslint-disable-next-line */}
-                    <span>⭐⭐⭐⭐</span>
+
+                    {/* Creates star rating based on number passed */}
+                    {/* eslint-disable-next-line */}
+                    {Array(rating).fill().map((_, i) => (<p>⭐</p>))}
+    
                 </div>
             </div>
 
-            <img src="https://images-na.ssl-images-amazon.com/images/I/51Zymoq7UnL._AC_SY400_.jpg" alt=""/>
+            <img src={image} alt=""/>
 
-            <button>Add to Basket</button>
+            <button> Add to Basket </button>
             
         </div>
     )
