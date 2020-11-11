@@ -9,15 +9,15 @@ function Product({ id,  title, image, price, rating }) {
                 <p>{title}</p>
                 
                 <p className="produc-price">
-                    <small>$</small>
-                    <strong>{price}</strong>
+                    <span> $ </span>
+                    <strong> {price} </strong>
                 </p>
                 
                 <div className="product_rating">
 
                     {/* Creates star rating based on number passed */}
                     {/* eslint-disable-next-line */}
-                    {Array(rating).fill().map((_, i) => (<p>⭐</p>))}
+                    {Array(rating).fill().map((_, i) => (<p> ⭐ </p>))}
     
                 </div>
             </div>
