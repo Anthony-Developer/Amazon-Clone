@@ -14,6 +14,7 @@ const reducer = (state, action) => {
                 basket: [...state.basket, action.item]
             }
 
+        // Remove just one instance of the produc instead of all items with same product id
         case 'REMOVE_FROM_BASKET':
             const index = state.basket.findIndex(
                 (basketItem) => basketItem.id === action.id
