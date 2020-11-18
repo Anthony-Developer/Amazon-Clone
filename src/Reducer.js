@@ -1,5 +1,6 @@
 export const initialState = {
     basket: [],
+    user: null
 }
 
 // Selector, adds all items to the total
@@ -8,13 +9,14 @@ export const getBasketTotal = (basket) =>
 
 const reducer = (state, action) => {
     switch(action.type) {
+
         case 'ADD_TO_BASKET':
             return {
                 ...state, 
                 basket: [...state.basket, action.item]
             }
 
-        // Remove just one instance of the produc instead of all items with same product id
+        // Remove just one instance of the product instead of all items with same product id
         case 'REMOVE_FROM_BASKET':
             const index = state.basket.findIndex(
                 (basketItem) => basketItem.id === action.id
@@ -31,6 +33,12 @@ const reducer = (state, action) => {
             return {
                 ...state,
                  basket: newBasket
+            }
+        
+        case 'SET_USER':
+            return {
+                ...state, 
+                user: action.user
             }
 
             default: 

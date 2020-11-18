@@ -54,6 +54,10 @@
     color: #111;
 }
 
+.login_signInButton:hover {
+    cursor: pointer;
+}
+
 .login_registerButton {
     height: 30px;
     width: 100%;
@@ -61,4 +65,8 @@
     border: 1px solid;
     margin-top: 10px;
     border-color: darkgray;
+}
+
+.login_registerButton:hover {
+    cursor: pointer;
 }
