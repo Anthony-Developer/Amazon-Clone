@@ -7,7 +7,6 @@ import { getBasketTotal } from '../Reducer'
 function Subtotal() {
     // eslint-disable-next-line
     const [{basket}, dispatch] = useStateValue()
-    console.log(basket)
 
     return (
         <div className="subtotal">

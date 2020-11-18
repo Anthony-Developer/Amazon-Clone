@@ -27,6 +27,10 @@
     color: #111;
 }
 
+.product > button:hover {
+    cursor: pointer;
+}
+
 .product_info {
     height: 100px;
     margin-bottom: 10px;
